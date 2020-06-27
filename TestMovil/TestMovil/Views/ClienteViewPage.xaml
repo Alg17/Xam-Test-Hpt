@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TestMovil.Views.ClienteViewPage">
+    <ContentPage.Content>
+        <StackLayout >
+            <StackLayout Orientation="Horizontal">
+                <Entry Placeholder="Codigo" WidthRequest="100" Text="{Binding Cliente.Codigo,Mode=TwoWay}"/>
+                <Button Command="{Binding GetCliente}" Text="Buscar"/>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="Nombre"/>
+                <Entry Placeholder="Nombre" Text="{Binding Cliente.Nombre,Mode=TwoWay}"/>
+                <Label Text="Rnc"/>
+                <Entry Placeholder="Rnc" Text="{Binding Cliente.Rnc,Mode=TwoWay}"/>
+                <Label Text="Direccion"/>
+                <Entry Placeholder="Direccion" Text="{Binding Cliente.Direccion,Mode=TwoWay}"/>
+                <Label Text="Ciudad"/>
+                <Entry Placeholder="Ciudad" Text="{Binding Cliente.Ciudad,Mode=TwoWay}"/>
+                <Label Text="Telefono"/>
+                <Entry Placeholder="Telefono" Text="{Binding Cliente.Telefono,Mode=TwoWay}"/>
+                <Label Text="Correo"/>
+                <Entry Placeholder="Correo" Text="{Binding Cliente.Correo,Mode=TwoWay}"/>
+            </StackLayout>
+            
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Button Text="Guardar" Command="{Binding Guardar}"/>
+                <Button Text="Eliminar" Command="{Binding Eliminar}"/>
+                <Button Text="Modificar" WidthRequest="100" Command="{Binding Modificar}"/>
+            </StackLayout>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>
