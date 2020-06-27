@@ -43,6 +43,7 @@ namespace TestMovil.ViewModels
             Guardar = new Command(async () =>
             {
                 var codigoCliente = await Services.AddItemAsync(Cliente);
+
             });
 
             Eliminar = new Command(async () =>
